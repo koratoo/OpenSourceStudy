@@ -7,3 +7,28 @@ https://www.elastic.co/kr/blog/an-introduction-to-elasticsearch-sql-with-practic
 1. 구문 분석 단계에서 SQL쿼리가 추상 구문 트리(AST)로 변환된다.
 2. 모든 구문 검증이 이루어지면 이 단계에서 분석기가 AST를 검증하고 모든 표, 열, 별칭, 네임스페이스 등을 확인하여 계획을 수립한다.
 3. 모든 중복 표현식을 제거하는 등 이 계획이 최적화되고 나면 물리적 계획(DSL)으로 변환되어 실행될 준비를 갖춘다. 
+
+
+※ AST 용어가 나오는 문서 링크 
+
+--------------------------------------------------------------------
+https://github.com/elastic/elasticsearch/blob/main/build-conventions/src/main/java/org/elasticsearch/gradle/internal/checkstyle/AstUtils.java#L20
+
+We use `between(x, y)` calls with `switch` statements in tests to
+randomize test behaviour. However, some usages define `case` statements
+that can never execute, because the `case` value is outside the range
+defined by the `between` call.
+
+Write a rule that inspects the switches and the cases, and fails on the
+broken cases. This rule checks `between`, `randomIntBetween` and
+`randomInt`.
+
+우리는 테스트에서 switch 명령문과 함께 between(x, y) 호출을 사용합니다
+테스트 동작을 임의화합니다. 그러나 일부 사용자는 'case' 문을 정의합니다
+'case' 값이 범위를 벗어나므로 실행할 수 없습니다
+between 호출로 정의됩니다.
+
+스위치와 케이스를 검사하고 다음에 실패하는 규칙을 작성합니다
+broaked case. 이 규칙은 between, random int between 및
+'random Int'
+--------------------------------------------------------------------
