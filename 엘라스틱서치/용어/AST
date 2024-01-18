@@ -1,0 +1,9 @@
+Abstract Syntax Tree
+추상 구문 트리
+
+※ 참고문서
+https://www.elastic.co/kr/blog/an-introduction-to-elasticsearch-sql-with-practical-examples-part-1
+
+1. 구문 분석 단계에서 SQL쿼리가 추상 구문 트리(AST)로 변환된다.
+2. 모든 구문 검증이 이루어지면 이 단계에서 분석기가 AST를 검증하고 모든 표, 열, 별칭, 네임스페이스 등을 확인하여 계획을 수립한다.
+3. 모든 중복 표현식을 제거하는 등 이 계획이 최적화되고 나면 물리적 계획(DSL)으로 변환되어 실행될 준비를 갖춘다. 
