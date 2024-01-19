@@ -1,0 +1,18 @@
+ public static JavaVersion getRuntimeJavaVersion() {
+
+ static을 붙이는데
+
+ public static class MutableBuildParams {
+        private static MutableBuildParams INSTANCE = new MutableBuildParams();
+
+        private MutableBuildParams() {}
+
+        /**
+         * Resets any existing values from previous initializations.
+         */
+        public void reset() {
+
+        (중략)
+
+Mutable에선 붙이지 않는다.
+Mutable : 변하기 쉬운
