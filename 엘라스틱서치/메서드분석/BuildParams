@@ -11,6 +11,9 @@
          * Resets any existing values from previous initializations.
          */
         public void reset() {
+        ...
+        public void setJavaVersions(List<JavaHome> javaVersions) {
+        ...
 
         (중략)
 
