@@ -1,7 +1,3 @@
-
-NONE:
-
-이 케이스는 아무 작업도 하지 않습니다. 이 설정은 protocol 값이 NONE일 때 서버를 생성하지 않도록 하는 역할을 합니다.
 HTTP:
 ```java
     case HTTP -> {
